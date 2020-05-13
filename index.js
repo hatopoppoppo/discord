@@ -1,5 +1,5 @@
-//ログイン処理
 const Discord = require('discord.js');
+const config = require('./config.json');
 const client = new Discord.Client();
 
 client.on('ready', message => {
@@ -64,4 +64,5 @@ client.on('message', message => {
         return;
     }
 });
-client.login(token);
+
+client.login(config.token);
